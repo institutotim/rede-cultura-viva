@@ -59,6 +59,12 @@ gulp.task('stylus', function(){
         .pipe(gulp.dest('build/css'))
 });
 
+// Copy fonts
+gulp.task('fonts', function() {
+    return gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest('build/fonts'));
+});
+
 // Call Imagemin
 gulp.task('imagemin', function() {
     return gulp.src('src/img/**/*')
@@ -73,6 +79,7 @@ gulp.task('watch', function(){
     gulp.watch('src/styl/**/*.styl', ['stylus']);
     gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
+    gulp.watch('src/fonts/**/*', ['fonts']);
 });
 
 // Call Watch for Browserify
@@ -81,6 +88,7 @@ gulp.task('watchfy', function(){
     gulp.watch('src/styl/**/*.styl', ['stylus']);
     gulp.watch('src/js/**/*.js', ['browserify']);
     gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
+    gulp.watch('src/fonts/**/*', ['fonts']);
 });
 
 gulp.task('browser-sync', function () {
@@ -88,6 +96,7 @@ gulp.task('browser-sync', function () {
       'build/**/*.html',
       'build/css/**/*.css',
       'build/img/**/*',
+      'build/fonts/**/*',
       'build/js/**/*.js'
    ];
 
@@ -114,13 +123,13 @@ gulp.task('deploy', function(){
 });
 
 // Default task
-gulp.task('default', ['js', 'jade', 'stylus', 'imagemin', 'watch', 'browser-sync']);
+gulp.task('default', ['js', 'jade', 'stylus', 'fonts', 'imagemin', 'watch', 'browser-sync']);
 
 // Default task using browserify
-gulp.task('fy', ['browserify', 'jade', 'stylus', 'imagemin', 'watchfy', 'browser-sync']);
+gulp.task('fy', ['browserify', 'jade', 'stylus', 'fonts', 'imagemin', 'watchfy', 'browser-sync']);
 
 // Build and Deploy
-gulp.task('build', ['js', 'jade', 'stylus', 'imagemin', 'deploy']);
+gulp.task('build', ['js', 'jade', 'stylus', 'imagemin', 'fonts', 'deploy']);
 
 // Build and Deploy
-gulp.task('buildfy', ['browserify', 'jade', 'stylus', 'imagemin', 'deploy']);
+gulp.task('buildfy', ['browserify', 'jade', 'stylus', 'imagemin', 'fonts', 'deploy']);
