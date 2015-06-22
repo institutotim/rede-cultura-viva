@@ -17,29 +17,61 @@
 
     And of course, look in node_modules for axis-css and jeet
 */
-//@import "kouto-swiss"
+@import "kouto-swiss"
 //@import "jeet"
 
 normalize()
-
 @import "foundation"
 @import "icons"
-
+font-face( "DroidSans", "/fonts/DroidSans-webfont", normal )
+font-face( "DroidSans", "/fonts/DroidSans-Bold-webfont", bold )
 amarelo = #f7c908
 
 body
+    font-family: 'DroidSans'
     background: rgba(7,85,121,1)
-    background: url('/img/bg.png'), -moz-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
-    background: url('/img/bg.png'), -webkit-gradient(left top, right top, color-stop(0%, rgba(7,85,121,1)), color-stop(51%, rgba(7,137,121,1)), color-stop(100%, rgba(7,85,121,1)))
-    background: url('/img/bg.png'), -webkit-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
-    background: url('/img/bg.png'), -o-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
-    background: url('/img/bg.png'), -ms-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
-    background: url('/img/bg.png'), linear-gradient(to right, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
+    // background: url('/img/bg.png'), -moz-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
+    // background: url('/img/bg.png'), -webkit-gradient(left top, right top, color-stop(0%, rgba(7,85,121,1)), color-stop(51%, rgba(7,137,121,1)), color-stop(100%, rgba(7,85,121,1)))
+    // background: url('/img/bg.png'), -webkit-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
+    // background: url('/img/bg.png'), -o-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
+    // background: url('/img/bg.png'), -ms-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
+    background-image: url('/img/bg.png'), linear-gradient(to right, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
     //    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#075579', endColorstr='#075579', GradientType=1 )
 
 
+#footer-brasil
+	background: none repeat scroll 0% 0% #00420c
+	padding: 1em 0px
+	max-width: 100%
 
 .box-menu
     background-color: #FFEC61
-    a
+    border-top: 4px solid #075579
+    .action-secondary-menu
+        font-size: 1.5em
+        i
+            line-height: 3em
+	.logo
+		margin: 0
+		font-size: 1em
+		max-width: 10em
+	a
         color: #F7931E
+    .main-menu
+        margin: 0
+        border-right: 1px solid #E2D02B
+        li
+            float: right
+            margin: 0
+            width: 5em
+        a
+            text-align: center
+            padding: .5em 0
+            border-left: 1px solid #E2D02B
+            &:hover
+                color: #078979
+        i
+            font-size: 2em
+            line-height: 1em
+            display: block
+
