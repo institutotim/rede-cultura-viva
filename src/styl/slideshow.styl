@@ -1,0 +1,62 @@
+.css-slideshow
+    position: relative
+    min-height: 30em
+
+.css-slideshow figure
+    margin: 0
+    min-height: 30em
+    // height: 370px
+    background: #000
+    position: absolute
+
+.css-slideshow img
+    box-shadow: 0 0 2px #666
+    width: 100%
+
+.css-slideshow figcaption
+    position: absolute
+    top: 0
+    color: #fff
+    background: rgba(0,0,0, .3)
+    font-size: .8em
+    padding: 8px 12px
+    opacity: 0
+    transition: opacity .5s
+
+.css-slideshow:hover figure figcaption
+    transition: opacity .5s
+    opacity: 1
+
+.css-slideshow-attr
+    max-width: 495px
+    text-align: right
+    font-size: .7em
+    font-style: italic
+    margin:0 auto
+
+.css-slideshow-attr a
+    color: #666
+.css-slideshow figure
+    opacity:0
+figure:nth-child(1)
+    animation: xfade 30s 24s infinite
+figure:nth-child(2)
+    animation: xfade 30s 18s infinite
+figure:nth-child(3)
+    animation: xfade 30s 12s infinite
+figure:nth-child(4)
+    animation: xfade 30s 6s infinite
+figure:nth-child(5)
+    animation: xfade 30s 0s infinite
+
+@keyframes xfade
+    0%
+        opacity: 1
+    14.67%
+        opacity: 1
+    16.67%
+        opacity: 0
+    98%
+        opacity: 0
+    100%
+        opacity: 1
