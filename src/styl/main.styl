@@ -1,24 +1,35 @@
 /*  Syntax Quick Reference for Jeet
-	--------------------------
-	column(ratios = 1, offset = 0, cycle = 0, uncycle = 0, gutter = jeet.gutter)
-	span(ratio = 1, offset = 0)
-	shift(ratios = 0, col_or_span = column, gutter = jeet.gutter)
-	unshift()
-	edit()
-	center(max_width = 1410px, pad = 0)
-	stack(pad = 0, align = false)
-	unstack()
-	align(direction = both)
-	cf()
+    --------------------------
+    column(ratios = 1, offset = 0, cycle = 0, uncycle = 0, gutter = jeet.gutter)
+    span(ratio = 1, offset = 0)
+    shift(ratios = 0, col_or_span = column, gutter = jeet.gutter)
+    unshift()
+    edit()
+    center(max_width = 1410px, pad = 0)
+    stack(pad = 0, align = false)
+    unstack()
+    align(direction = both)
+    cf()
 
-	For more info see:
-		Kouto Swiss Doc: http://kouto-swiss.io/
-		Jeet Doc: http://jeet.gs
+    For more info see:
+        Kouto Swiss Doc: http://kouto-swiss.io/
+        Jeet Doc: http://jeet.gs
 
-	And of course, look in node_modules for axis-css and jeet
+    And of course, look in node_modules for axis-css and jeet
 */
 //@import "kouto-swiss"
 //@import "jeet"
 
-@import "normalize"
+normalize()
+
 @import "foundation"
+
+body
+    background: rgba(7,85,121,1)
+    background: url('/img/bg.png'), -moz-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
+    background: url('/img/bg.png'), -webkit-gradient(left top, right top, color-stop(0%, rgba(7,85,121,1)), color-stop(51%, rgba(7,137,121,1)), color-stop(100%, rgba(7,85,121,1)))
+    background: url('/img/bg.png'), -webkit-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
+    background: url('/img/bg.png'), -o-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
+    background: url('/img/bg.png'), -ms-linear-gradient(left, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
+    background: url('/img/bg.png'), linear-gradient(to right, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
+//    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#075579', endColorstr='#075579', GradientType=1 )
