@@ -4,6 +4,7 @@
   "description": "A simple boilerplate to create projects with jade, stylus and gulp.",
   "main": "gulpfile.js",
   "scripts": {
+	"start": "./node_modules/gulp/bin/gulp.js fy",
     "test": "karma start"
   },
   "dependencies": {
