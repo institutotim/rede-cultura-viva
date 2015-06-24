@@ -17,7 +17,7 @@ class Theme extends \MapasCulturais\Theme{
 
 		$app->hook('<<GET|POST|PUT|DELETE>>(<<*>>.<<*>>):before', function() use ($app){
 			$actions = array('sample', 'site', 'auth', 'user');
-
+			// /agents/single/{id} : PUT
 			if (!in_array ($this->id, $actions)) {
 				$app->pass();
 			}
@@ -94,7 +94,6 @@ class Theme extends \MapasCulturais\Theme{
 		$app->applyHookBoundTo($this, 'theme.enqueueScripts:before');
 
 		$this->enqueueScript('main', 'main', 'js/main.js');
-
 		$app->applyHookBoundTo($this, 'theme.enqueueScripts:after');
 	}
 
@@ -119,7 +118,11 @@ class Theme extends \MapasCulturais\Theme{
 
 		$this->_printJsObject();
 
+	}
+
+	function footer() {
 		$this->printScripts('main');
+		$app = App::i();
 
 		$app->applyHook('mapasculturais.scripts');
 	}

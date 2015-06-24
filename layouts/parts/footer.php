@@ -1,3 +1,4 @@
-        <?php $this->bodyEnd(); ?>
+		<?php $this->footer(); ?>
+		<?php $this->bodyEnd(); ?>
     </body>
 </html>
