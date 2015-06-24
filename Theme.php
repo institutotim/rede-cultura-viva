@@ -73,19 +73,34 @@ class Theme extends \MapasCulturais\Theme{
 		}
 	}
 
+	protected $agent_metadata = [
+		'chave'=> [
+			'label'=>'Minha chave azul',
+			'private' => true,
+            'validations' => array(
+                'required' => 'A chave azul é obrigatório.'
+			)
+		],
+		'chave2'=> ['label'=>'Minha chave azul 2', 'private' => true, ],
+	];
+
 	public function register() {
 		$app = App::i();
 
 		$app->registerController('sample', 'CulturaViva\SampleController');
+
 		$def = new \MapasCulturais\Definitions\Metadata('cultura_viva_ids', [
 			'label' => 'Id do Agente, Agente Coletivo e Registro da inscrição',
-			'private' => true,
-			/* 'validations'=> [ */
-			/* 	'v::arr()' => 'array inválido' // melhorar validação da existência dos ids */
-			/* ] */
+			'private' => true
 		]);
-
 		$app->registerMetadata($def, 'MapasCulturais\Entities\User');
+
+		foreach ($this->agent_metadata as $k => $v) {
+			$def = new \MapasCulturais\Definitions\Metadata($k, $v);
+			$app->registerMetadata($def, 'MapasCulturais\Entities\Agent', 1);
+			$app->registerMetadata($def, 'MapasCulturais\Entities\Agent', 2);
+		}
+
 	}
 
 	protected function _enqueueScripts(){

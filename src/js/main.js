@@ -51,12 +51,13 @@ var Agent = {
 		return m.request({
 			url:'/agent/single/' + id, 
 			method: 'PATCH',
-			data: { 'shortDescription': '' },
+			data: { 'chave': '' },
 			config: xhrConfig,
 			serialize: function (data) { return m.route.buildQueryString(data); }
 		});
 	}
 };
+
 
 var Demo = {
 	//controller
@@ -76,12 +77,12 @@ var Demo = {
 
 	//view
 	view: function(ctrl) {
-		return m("div", [
-			ctrl.pages().map(function(page) {
-				return m("a", {href: page.url}, page.title);
-			}),
-			m("button", {onclick: ctrl.rotate}, "Rotate links")
-		]);
+		// return m("div", [
+		// 	ctrl.pages().map(function(page) {
+		// 		return m("a", {href: page.url}, page.title);
+		// 	}),
+		// 	m("button", {onclick: ctrl.rotate}, "Rotate links")
+		// ]);
 	}
 };
 
