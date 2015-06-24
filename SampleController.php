@@ -1,5 +1,5 @@
 <?php
-namespace MapasCulturais\Themes\SCDC;
+namespace CulturaViva;
 use MapasCulturais\Traits;
 use MapasCulturais\Entities;
 

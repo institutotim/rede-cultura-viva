@@ -17,7 +17,7 @@
 
     And of course, look in node_modules for axis-css and jeet
 */
-@import "kouto-swiss"
+//@import "kouto-swiss"
 //@import "jeet"
 
 normalize()
@@ -26,27 +26,26 @@ normalize()
 @import "icons"
 @import "slideshow"
 
-font-face( "DroidSans", "/fonts/DroidSans-webfont", normal )
-font-face( "DroidSans", "/fonts/DroidSans-Bold-webfont", bold )
+@font-face
+  font-family: "DroidSans"
+  font-weight: normal
+  src: url("/fonts/DroidSans-webfont.eot")
+  src: url("/fonts/DroidSans-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/DroidSans-webfont.woff") format("woff"), url("/fonts/DroidSans-webfont.ttf") format("truetype"), url("/fonts/DroidSans-webfont.svg#DroidSans") format("svg")
 
-amarelo = #f7c908
+@font-face
+  font-family: "DroidSans"
+  font-weight: bold
+  src: url("/fonts/DroidSans-Bold-webfont.eot")
+  src: url("/fonts/DroidSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/DroidSans-Bold-webfont.woff") format("woff"), url("/fonts/DroidSans-Bold-webfont.ttf") format("truetype"), url("/fonts/DroidSans-Bold-webfont.svg#DroidSans") format("svg")
 
-h2,
-h3
-    color: amarelo
+amarelo = #FBED1D
 
 body
     font-family: 'DroidSans'
-    background: rgba(7,85,121,1)
-    background-image: url('/img/bg.png'), linear-gradient(to right, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
-
-#footer-brasil
-    background: none repeat scroll 0% 0% #2c66ce
-    padding: 1em 0px
-    max-width: 100%
+    background: url('/img/bg.png'), linear-gradient(to right, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
 
 .box-menu
-    background-color: #FFEC61
+    background-color: amarelo
     border-top: 4px solid #075579
     .action-secondary-menu
         font-size: 1.5em
@@ -76,3 +75,22 @@ body
             line-height: 1em
             display: block
 
+h2,
+h3
+	color: amarelo
+	font-weight: bold
+	margin: .8em 0
+
+.featured-text,
+.tip-subject
+	margin-top: 3em
+	text-align: center
+	img
+		min-height: 5em
+	p
+		color: #fff
+
+#footer-brasil
+    background: none repeat scroll 0% 0% #2c66ce
+    padding: 1em 0px
+    max-width: 100%

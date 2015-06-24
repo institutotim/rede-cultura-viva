@@ -1,6 +1,5 @@
 <?php
-namespace MapasCulturais\Themes\SCDC;
-
+namespace CulturaViva;
 use MapasCulturais\App;
 
 class Theme extends \MapasCulturais\Theme{
@@ -48,8 +47,7 @@ class Theme extends \MapasCulturais\Theme{
 
 		$app->applyHookBoundTo($this, 'theme.enqueueScripts:before');
 
-		//$this->enqueueScript('vendor', 'angular', 'build/js/main.js');
-		//$this->enqueueScript('vendor', 'moment', 'build/js/vendor.js');
+		$this->enqueueScript('main', 'main', 'assets/js/main.js');
 
 		$app->applyHookBoundTo($this, 'theme.enqueueScripts:after');
 	}
@@ -59,6 +57,8 @@ class Theme extends \MapasCulturais\Theme{
 
 		$app->applyHookBoundTo($this, 'theme.enqueueStyles:before');
 
+		$this->enqueueStyles('main', 'main', 'assets/css/main.css');
+
 		$app->applyHookBoundTo($this, 'theme.enqueueStyles:after');
 	}
 
@@ -67,15 +67,13 @@ class Theme extends \MapasCulturais\Theme{
 
 		$app = App::i();
 
-		$this->printStyles('vendor');
-		$this->printStyles('app');
+		$this->printStyles('main');
 
 		$app->applyHook('mapasculturais.styles');
 
 		$this->_printJsObject();
 
-		$this->printScripts('vendor');
-		$this->printScripts('app');
+		$this->printScripts('main');
 
 		$app->applyHook('mapasculturais.scripts');
 	}
