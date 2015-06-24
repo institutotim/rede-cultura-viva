@@ -1,0 +1,51 @@
+doctype html
+html
+    head
+        title Title Site
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='description' content="meta desc")
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel="stylesheet", type="text/css", href="css/main.css")
+
+    body
+        #barra-brasil(style='background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;')
+            ul#menu-barra-temp(style='list-style:none;')
+                li(style='display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED')
+                  a(href='http://brasil.gov.br', style='font-family:sans,sans-serif; text-decoration:none; color:white;') Portal do Governo Brasileiro
+                | &#x9;&#x9;
+                li
+                  a(style='font-family:sans,sans-serif; text-decoration:none; color:white;', href='http://epwg.governoeletronico.gov.br/barra/atualize.html') Atualize sua Barra de Governo
+        .box-menu
+            .row
+                .small-1.columns
+                    a.action-secondary-menu(href="#")
+                        i.icon-menu
+                .small-14.columns
+                    h1.logo
+                        a(href="#")
+                            img(src="/img/logo-cultura-viva.svg")
+                .small-9.columns
+                    ul.inline-list.main-menu
+                        li
+                            a(href="./pagina-do-ponto.html")
+                                i.icon-user
+                                span Entrar
+                        li
+                            a(href="#")
+                                i.icon-map
+                                span Mapa
+                        li
+                            a(href="#")
+                                i.icon-calendar
+                                span Eventos
+                        // li
+                        //     a(href="#")
+                        //         img(src="/img/usuario.png")
+		#example
+		
+		#footer-brasil
+
+        script(type="text/javascript", src="js/main.js")
+        script(defer='defer', src='//barra.brasil.gov.br/barra.js', type='text/javascript')
+
