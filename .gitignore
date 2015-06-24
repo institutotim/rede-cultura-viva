@@ -1,6 +1,6 @@
 ### NODE ###
 node_modules
-build
+assets
 ### OSX ###
 .DS_Store
 .AppleDouble

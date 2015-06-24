@@ -27,7 +27,7 @@ gulp.task('jade', function(){
     return gulp.src('src/templates/*.jade')
         .pipe(plumber())
         .pipe(jade({pretty: !env.p }))
-        .pipe(gulp.dest('build/'))
+        .pipe(gulp.dest('assets/'))
 });
 
 // Call Uglify and Concat JS
@@ -36,7 +36,7 @@ gulp.task('js', function(){
         .pipe(plumber())
         .pipe(concat('main.js'))
         .pipe(gulpif(env.p, uglify()))
-        .pipe(gulp.dest('build/js'))
+        .pipe(gulp.dest('assets/js'))
 });
 
 // Call Uglify and Concat JS
@@ -45,7 +45,7 @@ gulp.task('browserify', function(){
         .pipe(plumber())
         .pipe(browserify({debug: !env.p }))
         .pipe(gulpif(env.p, uglify()))
-        .pipe(gulp.dest('build/js'))
+        .pipe(gulp.dest('assets/js'))
 });
 
 // Call Stylus
@@ -56,13 +56,13 @@ gulp.task('stylus', function(){
             use:[koutoSwiss(), prefixer(), jeet(),rupture()],
             compress: env.p
         }))
-        .pipe(gulp.dest('build/css'))
+        .pipe(gulp.dest('assets/css'))
 });
 
 // Copy fonts
 gulp.task('fonts', function() {
     return gulp.src('src/fonts/**/*')
-        .pipe(gulp.dest('build/fonts'));
+        .pipe(gulp.dest('assets/fonts'));
 });
 
 // Call Imagemin
@@ -70,7 +70,7 @@ gulp.task('imagemin', function() {
     return gulp.src('src/img/**/*')
         .pipe(plumber())
         .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-        .pipe(gulp.dest('build/img'));
+        .pipe(gulp.dest('assets/img'));
 });
 
 // Call Watch
@@ -93,16 +93,16 @@ gulp.task('watchfy', function(){
 
 gulp.task('browser-sync', function () {
    var files = [
-      'build/**/*.html',
-      'build/css/**/*.css',
-      'build/img/**/*',
-      'build/fonts/**/*',
-      'build/js/**/*.js'
+      'assets/**/*.html',
+      'assets/css/**/*.css',
+      'assets/img/**/*',
+      'assets/fonts/**/*',
+      'assets/js/**/*.js'
    ];
 
    browserSync.init(files, {
       server: {
-         baseDir: './build/'
+         baseDir: './assets/'
       }
    });
 });
