@@ -101,6 +101,18 @@ class Theme extends \MapasCulturais\Theme{
 			$app->registerMetadata($def, 'MapasCulturais\Entities\Agent', 2);
 		}
 
+		$metalist_definition = new Definitions\MetaListGroup('projetos', [
+			'title' => ['label' => 'Nome'],
+			'value' => [
+				'label' => 'Projeto',
+				'validations' => [
+					'required' => 'O json dos projetos é obrigatório',
+					"v::json()" => "Json inválido"
+				]
+			]
+		]);
+		$app->registerMetaListGroup('agent', $metalist_definition);
+
 	}
 
 	protected function _enqueueScripts(){
