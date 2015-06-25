@@ -35,55 +35,62 @@ var Sections = function() {
     // return m.request({method: "GET", url: "pages.json"});
 };
 
-var Agent = {
-	update: function (id) {
-		// var data = new FormData();
-		// data.append('longDescription', 'testes long');
-		// data.append('shortDescription', 'testes short');
-		// data.append('location', [0, 0]);
-		// data.append('endereco', 'testes e');
-		// data.append('terms', {area: ['Arqueologia']});
-		var xhrConfig = function(xhr) {
-			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-			xhr.setRequestHeader("X_REQUESTED_WITH", "XMLHttpRequest");
-		}
 
-		return m.request({
-			url:'/agent/single/' + id, 
-			method: 'PATCH',
-			data: { 'chave': '' },
-			config: xhrConfig,
-			serialize: function (data) { return m.route.buildQueryString(data); }
-		});
-	}
+
+
+
+
+
+
+var Agent = {
+    update: function (id) {
+        // var data = new FormData();
+        // data.append('longDescription', 'testes long');
+        // data.append('shortDescription', 'testes short');
+        // data.append('location', [0, 0]);
+        // data.append('endereco', 'testes e');
+        // data.append('terms', {area: ['Arqueologia']});
+        var xhrConfig = function(xhr) {
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.setRequestHeader("X_REQUESTED_WITH", "XMLHttpRequest");
+        }
+
+        return m.request({
+            url:'/agent/single/' + id, 
+            method: 'PATCH',
+            data: { 'chave': '' },
+            config: xhrConfig,
+            serialize: function (data) { return m.route.buildQueryString(data); }
+        });
+    }
 };
 
 
 var Demo = {
-	//controller
-	controller: function() {
-//		var pages = Page.list();
-		var ids = CulturaViva.ids;
-		var agent = Agent.update(ids.agente_individual).then(function (data) {
-			console.log(data);
-		});
-		return {
-//			pages: pages,
-			// rotate: function() {
-			// 	pages().push(pages().shift());
-			// }
-		}
-	},
+    //controller
+    controller: function() {
+//      var pages = Page.list();
+        // var ids = CulturaViva.ids;
+        // var agent = Agent.update(ids.agente_individual).then(function (data) {
+        //  console.log(data);
+        // });
+        return {
+//          pages: pages,
+            // rotate: function() {
+            //  pages().push(pages().shift());
+            // }
+        }
+    },
 
-	//view
-	view: function(ctrl) {
-		// return m("div", [
-		// 	ctrl.pages().map(function(page) {
-		// 		return m("a", {href: page.url}, page.title);
-		// 	}),
-		// 	m("button", {onclick: ctrl.rotate}, "Rotate links")
-		// ]);
-	}
+    //view
+    view: function(ctrl) {
+        // return m("div", [
+        //  ctrl.pages().map(function(page) {
+        //      return m("a", {href: page.url}, page.title);
+        //  }),
+        //  m("button", {onclick: ctrl.rotate}, "Rotate links")
+        // ]);
+    }
 };
 
 

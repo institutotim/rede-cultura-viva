@@ -42,8 +42,39 @@ html
                         // li
                         //     a(href="#")
                         //         img(src="/img/usuario.png")
-        #example
+        .row
+            .large-16.large-centered.columns.text-center
+                h2 NOME DO PONTO
+                h3 PÁGINA DO SEU PONTO
+                p Esta é a página do seu ponto de cultura. Apenas você tem acesso a ela.
+                p Fique a vontade para ir preenchendo as sessões - você não precisa fazer tudo agora! Quanto sua página estiver completa, clique em "validar dados" e aguarde de XX a XX dias para obter uma resposta da Rede Cultura Viva.
+                p Depois, seu ponto poderá criar eventos, projetos e usar a plataforma para se manter em contato com o MinC, se inscrevendo em editais.
+        .row
+            .large-offset-2.large-10.columns.box-status-cadastro
+                .head
+                    i.icon-user
+                    h4 Informações do Responsável
+                    a.action-open-form(href="#") +
+                .content.large-24.columns
+                    .text.large-19.columns
+                        p Maria Almeida Dias
+                        p CPF: 333.000.333-33
+
+                        a(href="#") Qual é sua formação?
+                    .large-5.columns
+                        .set-size
+                            .pie-wrapper.progress-30.style-2
+                                span.label 95 
+                                    span.smaller %
+                                .pie
+                                    .left-side.half-circle
+                                    .right-side.half-circle
+                                .shadow
+            .large-offset-2.large-10.columns
+                p teste
         
+
+        #example
         #footer-brasil
 
         script(type="text/javascript", src="js/main.js")
