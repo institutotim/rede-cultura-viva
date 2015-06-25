@@ -43,6 +43,12 @@ amarelo = #FBED1D
 body
     font-family: 'DroidSans'
     background: url('/img/bg.png'), linear-gradient(to right, rgba(7,85,121,1) 0%, rgba(7,137,121,1) 51%, rgba(7,85,121,1) 100%)
+p
+    color: #fff
+.button
+    color: #078979
+    border-radius: .5em
+    font-weight: bold
 
 .box-menu
     background-color: amarelo
@@ -76,7 +82,8 @@ body
             display: block
 
 h2,
-h3
+h3,
+h4
 	color: amarelo
 	font-weight: bold
 	margin: .8em 0
@@ -87,8 +94,29 @@ h3
 	text-align: center
 	img
 		min-height: 5em
-	p
-		color: #fff
+.criterio-content,
+.criterio-featured,
+.criterio-list
+    text-align: center
+
+.criterio-featured
+    h4 i
+        display: block
+        font-size: 1.5em
+.menu-criterios
+    margin: 0 auto
+    display: inline-block
+    li
+        border-top: 5px solid amarelo
+        margin: 0
+        padding: .8em
+        &.selected
+            border-color: #F7931E
+            i
+                color: #F7931E
+        a
+            font-size: 1.2em
+
 
 #footer-brasil
     background: none repeat scroll 0% 0% #2c66ce
