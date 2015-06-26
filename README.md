@@ -119,7 +119,7 @@ $app->registerMetadata($def, 'MapasCulturais\Entities\User');
 
 ### Mapa de entidades dos Pontos de cultura
 
-Explicar que um Ponto de cultura ou Pontão é composto por 3 agentes. Agente Individual(responsável), Agente Coletivo(entidade) e Agente individual(o ponto de cultura propriamente dito). Se o Ponto tiver sede própria deverá ser criado um novo espaço.
+Explicar que um Ponto de cultura ou Pontão é composto por 3 agentes. Agente Individual(responsável), Agente Coletivo(entidade) e Agente coletivo(o ponto de cultura propriamente dito). Se o Ponto tiver sede própria deverá ser criado um novo espaço.
 
 ### Compartilhar variáveis do Mapas Culturais no JS
 
