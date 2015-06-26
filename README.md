@@ -42,6 +42,23 @@ Ela irá gerar uma documentação parecida com a do [doctrine](http://www.doctri
 
 Sobre como o arquivo funciona dentro do tema e como executar o que tem nele.
 
+### Habilitar página de conteúdo
+
+Você precisa adicionar ao ``` Theme.php ``` o seguinte método:
+
+```
+    protected static function _getTexts(){
+        return array(
+            'site: name' => App::i()->config['app.siteName'],
+            'site: description' => App::i()->config['app.siteDescription']
+		);
+	}
+```
+
+É necessário também adicionar a pasta ``` pages ``` ao diretório do tema. Onde ficará os textos.
+
+Outros dois arquivos precisam ser criados ``` _left.md ``` e ``` _right.md ```.
+
 ## Documentação do Tema
 
 ### Frontend

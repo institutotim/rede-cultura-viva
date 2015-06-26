@@ -22,7 +22,7 @@
         <div class="row">
             <div class="small-1 columns"><a href="#" class="action-secondary-menu"><i class="icon-menu"></i></a></div>
             <div class="small-14 columns">
-                <h1 class="logo"><a href="#"><img src="/img/logo-cultura-viva.svg"></a></h1>
+				<h1 class="logo"><a href="#"><img src="<?php $this->asset('./img/logo-cultura-viva.svg'); ?>"></a></h1>
             </div>
         <div class="small-9 columns">
             <ul class="inline-list main-menu">

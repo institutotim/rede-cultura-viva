@@ -89,7 +89,7 @@ class Theme extends \MapasCulturais\Theme{
 		$app = App::i();
 
 		$app->registerController('sample', 'CulturaViva\SampleController');
-		$url = $app->createUrl('site');
+		//$url = $app->createUrl('site');
 		$def = new \MapasCulturais\Definitions\Metadata('cultura_viva_ids', [
 			'label' => 'Id do Agente, Agente Coletivo e Registro da inscrição',
 			'private' => true
@@ -155,6 +155,12 @@ class Theme extends \MapasCulturais\Theme{
 		$app->applyHook('mapasculturais.scripts');
 	}
 
+    protected static function _getTexts(){
+        return array(
+            'site: name' => App::i()->config['app.siteName'],
+			'site: description' => App::i()->config['app.siteDescription']
+		);
+	}
 
     protected function _printJsObject($var_name = 'CulturaViva', $print_script_tag = true) {
 
