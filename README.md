@@ -22,7 +22,7 @@ A maneira mais rápida de iniciar o desenvolvimento é clonar o repositório do 
 
 Depois de executar os comandos você poderá verificar no endereço abaixo o mapas culturais funcionando:
 
-```http://localhost:8000```
+``` http://localhost:8000 ```
 
 ### Tema em branco
 
@@ -34,7 +34,7 @@ O tema é simples e sem conteúdo extra, além de não possuir funcionalidades h
 
 Para facilitar a leitura do código do Mapas Culturais gerar documentação é essencial, ó comando abaixo deve ser executado dentro de um instalação válida do Mapas Culturais.
 
-```./scripts/apigen.sh```
+``` ./scripts/apigen.sh ```
 
 Ela irá gerar uma documentação parecida com a do [doctrine](http://www.doctrine-project.org/api/orm/2.4/).
 
@@ -57,13 +57,13 @@ Sobre como o arquivo funciona dentro do tema e como executar o que tem nele.
 
 Configurando este tema na instalação do mapas culturais recém criada.
 
-Depois de configurar, você precisar compilar os assets. Existem outras tarefas configuradas, você pode ver todas em ```gulpfile.js``
+Depois de configurar, você precisar compilar os assets. Existem outras tarefas configuradas, você pode ver todas em ``` gulpfile.js ```
 
-```cd [pasta do tema]```
+``` cd [pasta do tema] ```
 
-```npm install```
+``` npm install ```
 
-```./node_modules/gulp/bin/gulp.js fy```
+``` ./node_modules/gulp/bin/gulp.js fy ```
 
 ### Usando autenticação oAuth
 
@@ -136,3 +136,4 @@ Para passar a variável do PHP para o JS:
 ```
 $this->jsObject['ids'] = json_decode($app->user->cultura_viva_ids);
 ```
+
