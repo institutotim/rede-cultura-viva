@@ -1,6 +1,7 @@
 <?php
 namespace CulturaViva;
 use MapasCulturais\App;
+use MapasCulturais\Definitions;
 
 class Theme extends \MapasCulturais\Theme{
 
@@ -88,7 +89,7 @@ class Theme extends \MapasCulturais\Theme{
 		$app = App::i();
 
 		$app->registerController('sample', 'CulturaViva\SampleController');
-
+		$url = $app->createUrl('site');
 		$def = new \MapasCulturais\Definitions\Metadata('cultura_viva_ids', [
 			'label' => 'Id do Agente, Agente Coletivo e Registro da inscrição',
 			'private' => true
